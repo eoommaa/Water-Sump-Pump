@@ -29,7 +29,7 @@
 
 | Passive Components | Quantity | Notes |
 | :--: | :--: | :--: |
-| 10k &#8486; Resistors | 3 | LEDs current limiting |
+| 330 &#8486; Resistors | 3 | LEDs current limiting |
 | 100 &mu;F Capacitors | 3 | Button debouncing |
 
 <br>
