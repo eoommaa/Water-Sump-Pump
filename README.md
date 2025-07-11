@@ -5,19 +5,32 @@
   - 60-minute countdown displayed in `MM:SS` format with the temperature on the LCD (`Countdown: 60:00` & `Temp: 80 F`)
 
 ## Bill of Material (BOM)
-*Note: Below are the components used for testing the Pi Pico*
-| Component | Quantity | Notes |
+*Note: Components used for prototyping*
+| Hardware | Quantity | Notes |
 | :--: | :--: | :--: |
 | Raspberry Pi Pico | 1 | RP2040 MCU |
+| L298N Motor Driver | 1 | Fan & motor/relay control |
+| 9V DC Battery | 1 | Power source for L298N motor driver |
+
+| User Control | Quantity | Notes |
+| :--: | :--: | :--: |
 | NO[^1] Buttons | 3 | `START`/`STOP`/`RESET` |
+
+| User Feedback | Quantity | Notes |
+| :--: | :--: | :--: |
 | LEDs | 3 | Green (`START`), Red (`STOP`), Blue (`RESET`) |
-| 10k &#8486; Resistors | 3 | For LEDs |
-| 100 &mu;F Capacitors | 3 | Button debouncing |
-| 5V Fan | 1 | - |
-| Motor | 1 | Relay testing |
-| Buzzer | 1 | RESET button |
 | I2C LCD 1602 | 1 | Displaying countdown time & temp |
-| L298N Motor Driver | 1 | Fan and motor control |
+| Piezoelectric Buzzer | 1 | Beeps on `RESET` button | |
+
+| System Feedback | Quantity | Notes |
+| :--: | :--: | :--: |
+| 5V Fan | 1 | Thermal safety |
+| Motor | 1 | Relay testing |
+
+| Passive Components | Quantity | Notes |
+| :--: | :--: | :--: |
+| 10k &#8486; Resistors | 3 | LEDs current limiting |
+| 100 &mu;F Capacitors | 3 | Button debouncing |
 
 <br>
 
