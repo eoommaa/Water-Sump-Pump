@@ -34,22 +34,23 @@ A countdown timer for managing a water sump pump using a Raspberry Pi Pico progr
 
 ## Relay and Sump Pump Specs
 *Note: Similar components connected in the final hardware*
-| Item | Manufacturer Part Number | Datasheet | Notes |
+| Component | Manufacturer Part Number | Datasheet | Notes |
 | :--: | :--: | :--: | :--: |
 | Relay | AZ9375-1A-24DEF | [AZ9375 SENSITIVE SUBMINIATURE RELAY](https://www.azettler.com/pdfs/az9375.pdf) | 12 VDC coil, 120 VAC (10 A) |
 | Sump Pump | PF92342-PB | [PF92342 Thermoplastic Sump Pump](https://fergusonprod.a.bigcontent.io/v1/static/5097488_7397986_specification) | 2400 GPH at 0' lift |
 
-<br>
+# Schematics[^2][^3]
 
-***SLAC Water Sump Pump Countdown Timer Schematic***[^2]
+## SLAC Water Sump Pump Countdown Timer Schematic
+![image](https://github.com/eoommaa/Water-Sump-Pump/blob/main/kicad/schematics/SLAC%20Water%20Sump%20Pump.svg)
 
-***RP2040 Water Sump Pump Countdown Timer Schematic***[^3]
+## RP2040 Water Sump Pump Countdown Timer Schematic
+![image](https://github.com/eoommaa/Water-Sump-Pump/blob/main/kicad/schematics/RP2040%20Water%20Sump%20Pump.svg)
 
-- [ ] rp2040 pic here, pics/gif of 3 buttons
 
 # Relay Behavior
 Relay controls the 120 VAC outlet like a feedback loop.
-- [`SLAC Water Sump Pump` schematic](LINK): Pin 3 from `K1` relay has an input of 120 VAC L input (10 A) and Pin 4 is an input to the same 120 VAC output
+- **`SLAC Water Sump Pump Countdown Timer` [Schematic](#slac-water-sump-pump-countdown-timer-schematic):** Pin 3 from `K1` relay has an input of 120 VAC L input (10 A) and Pin 4 is an input to the same 120 VAC output
 - **`START`:** Relay NC[^1] &rarr; Sump pump activates
 - **`STOP` & `RESET`:** Relay NO &rarr; Sump pump deactivates
 
@@ -91,12 +92,12 @@ Relay controls the 120 VAC outlet like a feedback loop.
 
 
 # Notes
-- **[`SLAC Water Sump Pump` schematic](LINK):** A `K1` relay is connected to the L298N motor driver, which is the component connected in the final hardware
-- **[`RP2040 Water Sump Pump` schematic](LINK):** A 5V DC motor is used since the relay acts like a switch along with an IC2 1602 LCD connected to the RP2040
+- **`SLAC Water Sump Pump Countdown Timer` [Schematic](#slac-water-sump-pump-countdown-timer-schematic):** A `K1` relay is connected to the L298N motor driver, which is the component connected in the final hardware
+- **`RP2040 Water Sump Pump Countdown Timer` [Schematic](#rp2040-water-sump-pump-countdown-timer-schematic):** A 5V DC motor is used since the relay acts like a switch along with an IC2 1602 LCD connected to the RP2040
   - Ex: Motor on when countdown timer is running and vice versa when it is off
 - Green LED stays on during both idle and after completion states to indicate that the Pi Pico is powered
 
 
 [^1]: Normally open (NO) & normally closed (NC)
-[^2]: [SLAC Water Sump Pump Countdown Timer KiCad Schematic](LINK)
-[^3]: [RP2040 Water Sump Pump Countdown Timer KiCad Schematic](LINK)
+[^2]: `SLAC Water Sump Pump Countdown Timer` [Schematic](https://github.com/eoommaa/Water-Sump-Pump/blob/main/kicad/schematics/SLAC%20Water%20Sump%20Pump.pdf) and [`.kicad_sch`](https://github.com/eoommaa/Water-Sump-Pump/blob/main/kicad/SLAC%20Water%20Sump%20Pump.kicad_sch)
+[^3]: `RP2040 Water Sump Pump Countdown Timer` [Schematic](https://github.com/eoommaa/Water-Sump-Pump/blob/main/kicad/schematics/RP2040%20Water%20Sump%20Pump.pdf) and [`.kicad_sch`](https://github.com/eoommaa/Water-Sump-Pump/blob/main/kicad/RP2040%20Water%20Sump%20Pump.kicad_sch)
