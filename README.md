@@ -34,7 +34,7 @@ Relay controls the 120 VAC outlet like a feedback loop.
   > Countdown stopped!
   
   > Press START or RESET
-- [`countdown_stop`](LINK) set to `True` to pause the countdown timer
+- [`countdown_stop = True`](https://github.com/eoommaa/Water-Sump-Pump/blob/d4ba52d33f075a21b61ff5ee6c35b372b952a699/src/water_sump_pump.py#L166-L175) pauses the countdown timer
 
 ### `START` & [`RESET`](#reset-button) Button on `STOP`
 - **`START`:** Countdown timer continues from the time it was paused on
@@ -48,7 +48,7 @@ Relay controls the 120 VAC outlet like a feedback loop.
   > Countdown reset!
   
   > Press START to start over
-- [`system_locked`](LINK) set to `True` and only allows the user one button to press on to restart the countdown timer
+- [`system_locked = True`](https://github.com/eoommaa/Water-Sump-Pump/blob/d4ba52d33f075a21b61ff5ee6c35b372b952a699/src/water_sump_pump.py#L178-L186) allows the user one button to press on to restart the countdown timer
   - User can press on `STOP` or `RESET` button, but the program ignores the two button presses when in `RESET` mode
 
 
