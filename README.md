@@ -3,7 +3,9 @@ A countdown timer for managing a water sump pump using a Raspberry Pi Pico progr
 - **Features:** Automates sump pump intervals and relay activation with a 60-minute countdown timer, 3-button control (`START`/`STOP`/`RESET`), and thermal safety from 80°F fan activation to prevent overheating
   - Each button (`START`/`STOP`/`RESET`) is mapped to an LED and activates a specific state when the user presses on it
   - 60-minute countdown timer displayed in `MM:SS` format with the temperature on the LCD (`Countdown: 60:00` & `Temp: 80 F`)
+  - **LCD Library from [`RPI-PICO-I2C-LCD`](https://github.com/T-622/RPI-PICO-I2C-LCD/tree/main) by [`T-622`](https://github.com/T-622):** [`lcd_api`](/src/lcd/lcd_api.py) & [`pico_i2c_lcd`](/src/lcd/pico_i2c_lcd.py)
 - **Components:** [Full BOM](docs/BOM.md) with relay and sump pump specs
+
 
 # Schematics[^1][^2]
 
@@ -62,6 +64,10 @@ Relay controls the 120 VAC outlet like a feedback loop.
 - **[`RP2040 Water Sump Pump Countdown Timer` Schematic](#rp2040-water-sump-pump-countdown-timer-schematic):** A 5V DC motor is used since the relay acts like a switch along with an IC2 1602 LCD connected to the RP2040
   - Ex: Motor on when countdown timer is running and vice versa when it is off
 - **Power Indicator:** Green LED stays on during both idle and after completion states to indicate that the Pi Pico is powered
+
+
+# Credit
+- **LCD Library:** Adapted from [`RPI-PICO-I2C-LCD`](https://github.com/T-622/RPI-PICO-I2C-LCD/tree/main) by [`T-622`](https://github.com/T-622)
 
 
 [^1]: [`SLAC Water Sump Pump Countdown Timer` Schematic](https://github.com/eoommaa/Water-Sump-Pump/blob/main/kicad/schematics/SLAC%20Water%20Sump%20Pump.pdf) and [`.kicad_sch`](https://github.com/eoommaa/Water-Sump-Pump/blob/main/kicad/SLAC%20Water%20Sump%20Pump.kicad_sch)
