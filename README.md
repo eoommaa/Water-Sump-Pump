@@ -24,6 +24,17 @@ Relay controls the 120 VAC outlet like a feedback loop.
 
 
 # `START`/`STOP`/`RESET` Button Controls
+## `START`/`STOP`/`RESET` Button State Diagram
+```
+               ┌──────────────────────────┐
+               │                          ▼
+┌────┐   ┌─────┴───┐   ┌────────┐   ┌─────────┐
+│Idle├──►│START Btn├──►│STOP Btn├──►│RESET Btn│
+└────┘   └─────────┘   └────┬───┘   └────┬────┘
+              ▲             ▼            │
+              └──────────────────────────┘
+```
+
 ## `START` Button
 - **Function:** Default state where the system starts 60-minute countdown timer
 - **LED:** Blinking green
