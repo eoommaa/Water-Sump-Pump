@@ -69,10 +69,11 @@ System State Flags
 - Sys and countdown timer set to false means the both are running normally
 - system_locked: True → Sys locked via RESET btn
 - countdown_stop: True → Pauses countdown via STOP btn
+- initial_countdown_time: Time in sec (e.g., 3600s = 1 hr). Change to 5s for prototyping
 '''
 system_locked = False
 countdown_stop = False
-initial_countdown_time = 5		# Time in sec. Ex: 3600s = 1 hr
+initial_countdown_time = 3600
 countdown_time = initial_countdown_time
 
 '''
